@@ -35,7 +35,7 @@ const Section2 = () => {
   // Call the hook passing in ref and root margin
   // In this case it would only be considered onScreen if more ...
   // ... than 300px of element is visible.
-  const onScreen = useOnScreen(ref, "200px");
+  const onScreen = useOnScreen(ref, "100px");
 
 
     if(onScreen){
