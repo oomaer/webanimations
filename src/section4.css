@@ -1,0 +1,82 @@
+.section4-content{
+    flex-direction: row-reverse;
+}
+
+
+.section4-image-container{
+    display: flex;
+    align-items: center;
+    height: 30vw;
+    width: 40vw;
+    margin-right: 2rem;
+}
+
+#section4-imgback{
+    width: 90%;
+    height: 90%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform: scaleX(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+#section4-imgfront{
+    width: 38%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 5%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform: scaleY(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.section4-image-container .sec4-circleimg{
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    position: absolute;
+    transform: translateY(20px);
+    opacity: 1;
+}
+
+#section4-extension1{
+    top: 13%;
+    left: 6%;
+    animation: SligthMoveUpDown 4s infinite;
+    animation-delay: 0s;
+}
+
+#section4-extension2{
+    top: 35%;
+    left: 6%;
+    animation: SligthMoveUpDown 2s infinite;
+    animation-delay: 0s;
+}
+
+#section4-extension3{
+    top: 56%;
+    left: 6%;
+    animation: SligthMoveUpDown 3s infinite;
+    animation-delay: 0s;
+}
+
+#section4-extension4{
+    top: 76%;
+    left: 6%;
+    animation: SligthMoveUpDown 4s infinite;
+    animation-delay: 0s;
+}
+
+@keyframes SligthMoveUpDown{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+

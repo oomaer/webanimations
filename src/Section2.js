@@ -25,7 +25,7 @@ function useOnScreen(ref, rootMargin = "0px") {
       };
     }, [ref, rootMargin]); // Empty array ensures that effect is only run on mount and unmount
     return isIntersecting;
-  }
+}
 
 
 
@@ -35,7 +35,7 @@ const Section2 = () => {
   // Call the hook passing in ref and root margin
   // In this case it would only be considered onScreen if more ...
   // ... than 300px of element is visible.
-  const onScreen = useOnScreen(ref, "-300px");
+  const onScreen = useOnScreen(ref, "0px");
 
 
     if(onScreen){
@@ -43,12 +43,14 @@ const Section2 = () => {
         for(let circleimage of circleimages){
             circleimage.style.animation = '';
         }
+      
     }
     else{
         let circleimages = document.getElementsByClassName('circleimg');
         for(let circleimage of circleimages){
             circleimage.style.animation = 'none';
         }
+     
     }
 
 
@@ -57,10 +59,8 @@ const Section2 = () => {
 
             <div className = 'section-content section2-content'>
                 <div className = 'section-text-container section2-text-container'>
-                    <h1>I am Groot</h1>
-                    <p>I am groot, I am groot, I am groot, I am groot, I am groot
-                    I am groot, I am groot, I am groot, I am groot, I am groot, I am groot
-                    </p>
+                    <h1>Use the tools you love</h1>
+                    <p>Connect to your codespaces from your browser or Visual Studio Code.</p>
                 </div>
                 <div ref = {ref} className = 'section-image-container section2-image-container'>
                     <img className = 'mainimg' id = 'section2-code-img' alt = 'code' src = 'https://github.githubassets.com/images/modules/site/codespaces/code.png'></img>

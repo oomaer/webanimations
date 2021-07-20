@@ -6,13 +6,16 @@
 
 
 #section2-code-img{
-    height: 70%;
-    width: 70%;
+    height: 90%;
+    width: 90%;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .section2-image-container{
     position: relative;
+    height: 30vw;
+    width: 40vw;
+    margin-right: 2rem;
 }
 .section2-image-container .circleimg{
     width: 6vw;
@@ -25,37 +28,36 @@
 }
 
 #section2-safari-icon{
-    top: 10%;
+    top: 0%;
     right: 45%;
-    animation: slightlyRotateDown 3s infinite, translateUp 1s 1;
+    animation: translateUp 1s 1 forwards, slightlyRotateDown 3s infinite;
     animation-delay: 0s;
-    animation-fill-mode: forwards;
 }
 #section2-firefox-icon{
-    top: 25%;
+    top: 20%;
     right: 20%;
-    animation: slightlyRotateDown 6s infinite, translateUp 1s 1;
+    animation: translateUp 1s 1, slightlyRotateDown 6s infinite;
     animation-delay: 0.2s;
     animation-fill-mode: forwards;
 }
 #section2-chrome-icon{
     top: 40%;
     right: 45%;
-    animation: slightlyRotateDown 6s infinite, translateUp 1s 1;
+    animation: translateUp 1s 1, slightlyRotateDown 6s infinite;
     animation-delay: 0.4s;
     animation-fill-mode: forwards;
 }
 #section2-vscode-icon{
-    top: 55%;
+    top: 60%;
     right: 20%;
-    animation: slightlyRotateDown 4s infinite, translateUp 1s 1;
+    animation: translateUp 1s 1, slightlyRotateDown 4s infinite;
     animation-delay: 0.6s;
     animation-fill-mode: forwards;
 }
 #section2-edge-icon{
-    top: 72%;
+    top: 80%;
     right: 45%;
-    animation: slightlyRotateDown 3s infinite, translateUp 1s 1;
+    animation: translateUp 1s 1, slightlyRotateDown 3s infinite;
     animation-delay: 0.8s;
     animation-fill-mode: forwards;
 }
@@ -65,7 +67,7 @@
         transform: rotate(0deg) translate(0px, 0px);
     }
     50%{
-        transform: rotate(-15deg) translate(-3px, 10px);
+        transform: rotate(-30deg) translate(-3px, 20px);
     }
     100%{
         transform: rotate(0deg) translate(0px, 0px);

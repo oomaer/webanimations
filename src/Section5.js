@@ -85,9 +85,8 @@ const Section5 = () => {
                         </svg>
                     </div>
 
-                    <h1>I am Groot</h1>
-                    <p>I am groot, I am groot, I am groot, I am groot, I am groot
-                    I am groot, I am groot, I am groot, I am groot, I am groot, I am groot
+                    <h1>Develop from anywhere, anytime</h1>
+                    <p>With your development in the cloud, you can contribute code from any device.
                     </p>
                 </div>
 
