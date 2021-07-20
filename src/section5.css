@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+.dark{
+    --bg-color: black; 
+    --color-1: white;
+    --color-2: darkgray;
+    --sun-color: rgb(63, 61, 61);
+    --moon-color: rgb(102, 0, 128);
+    --animation: turnDark;
+    --image-animation: fadeLeft;
+}
+.light{
+    --bg-color: white;
+    --color-1: black;
+    --color-2: darkgray;
+    --sun-color: rgb(255, 239, 9);
+    --moon-color: rgb(63, 61, 61);
+    --animation: turnLight;
+    --image-animation: fadeRight;
+}
+
+#section5{ 
+    background-color: var(--bg-color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: var(--animation) 2s 1;
+    animation-fill-mode: forwards;
+    
+}
+
+.section5-text-container{
+    margin-bottom: 8rem;
+}
+
+.section5-text-container h1{
+    color: var(--color-1);
+}
+.section5-text-container p{
+    color: var(--color-2);
+}
+.section5-icons{
+    display: flex;
+    align-items: center;
+}
+.section5-icons label{
+    font-size: 5rem;
+    color: var(--color-2);
+    margin: 0.5rem;
+    
+}
+.section5-icons svg{
+    height: 4rem;
+    width: 4rem;
+    transition: color 0.4s ease-in-out;
+    animation: rotate 0.5s 1;
+    margin: 1rem;
+}
+.section5-icons #sun-icon{
+    color: var(--sun-color);
+}
+.section5-icons #moon-icon{
+    color: var(--moon-color);
+}
+
+
+.section5-image-container{
+    height: 37vw;
+    width: 50vw;
+    animation: var(--image-animation) 1s 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+.section5-image-container #commitimg{
+    position: absolute;
+    top: 10%;
+    right: 7%;
+    height: 7vw;
+    width: 23vw;
+    animation: fadeUp 0.5s 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+
+@keyframes turnDark {
+    0%{
+        background-color: white;
+    }
+    100%{
+        background-color: black;
+    }
+}
+
+@keyframes turnLight {
+    0%{
+        background-color: black;
+    }
+    100%{
+        background-color: white;
+    }
+}
+
+@keyframes fadeLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeUp{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

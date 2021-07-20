@@ -1,0 +1,87 @@
+.section2-content{
+    flex-direction: row-reverse;
+    height: 37vw;
+}
+
+
+
+#section2-code-img{
+    height: 70%;
+    width: 70%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.section2-image-container{
+    position: relative;
+}
+.section2-image-container .circleimg{
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    position: absolute;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+#section2-safari-icon{
+    top: 10%;
+    right: 45%;
+    animation: slightlyRotateDown 3s infinite, translateUp 1s 1;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+#section2-firefox-icon{
+    top: 25%;
+    right: 20%;
+    animation: slightlyRotateDown 6s infinite, translateUp 1s 1;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+#section2-chrome-icon{
+    top: 40%;
+    right: 45%;
+    animation: slightlyRotateDown 6s infinite, translateUp 1s 1;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+}
+#section2-vscode-icon{
+    top: 55%;
+    right: 20%;
+    animation: slightlyRotateDown 4s infinite, translateUp 1s 1;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+}
+#section2-edge-icon{
+    top: 72%;
+    right: 45%;
+    animation: slightlyRotateDown 3s infinite, translateUp 1s 1;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slightlyRotateDown{
+    0%{
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+    50%{
+        transform: rotate(-15deg) translate(-3px, 10px);
+    }
+    100%{
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+}
+
+@keyframes translateUp{
+    0%{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
