@@ -7,9 +7,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <Section5 />
       <Section2 />
       <Section4 />
-      <Section5 />
+      
     </div>
   );
 }
