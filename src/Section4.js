@@ -33,7 +33,7 @@ function useOnScreen(ref, rootMargin = "0px") {
 const Section4 = () => {
    
     const sec4_ref = useRef();
-    const onScreen = useOnScreen(sec4_ref, "0px");
+    const onScreen = useOnScreen(sec4_ref, "200px");
   
     if(document.getElementById('section4-imgback') !== null){
         if(onScreen){
