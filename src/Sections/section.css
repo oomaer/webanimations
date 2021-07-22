@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @keyframes fadeUp{
     0%{
         opacity: 0;
@@ -44,7 +44,7 @@
 }
 
 .section-content{
-    font-family: 'Otomanopee One', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
