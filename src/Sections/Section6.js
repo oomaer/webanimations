@@ -15,17 +15,14 @@ const Section6 = () => {
   
     const transformimage1 = document.getElementById('section6-image1');
     const transformimage2 = document.getElementById('section6-image3');
-    const text = document.getElementById('section6-text');
-    if(transformimage1 !== null && transformimage2 !== null && text !== null){
+    if(transformimage1 !== null && transformimage2 !== null){
       if(onScreen){
           transformimage1.style.transform = '';
           transformimage2.style.transform = '';
-          text.classList.add('heightUp_animation');
       }
       else{
           transformimage1.style.transform = 'scaleX(0.5)';
           transformimage2.style.transform = 'scaleX(0.5)';
-          text.classList.remove('heightUp_animation');
       }
     }
 

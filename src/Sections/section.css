@@ -2,7 +2,7 @@
 @keyframes fadeUp{
     0%{
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(100px);
     }
     100%{
         opacity: 1;
@@ -35,7 +35,6 @@
         opacity: 1;
     }
 }
-
 
 
 .heightUp_animation{
@@ -135,6 +134,10 @@
     .section-image-container{
         height: 50vw;
         width: 70vw;
+    }
+    .heightUp_animation{
+        opacity: 1;
+        animation: none;
     }
 
 
