@@ -12,16 +12,6 @@ import './App.css';
 
 function App() {
 
-  // const postReq = () => {
-  //   const scriptURL = 'https://sheetdb.io/api/v1/8pcbdn366pong';
-  //   const form = document.forms['google-sheet']
-  //   console.log(new FormData(form));
-  //   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-  //   .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-  //   .catch(error => console.error('Error!', error.message))
-  // }
-
-  
   return (
     <div className="App">
 
@@ -34,7 +24,7 @@ function App() {
       <Section7 />
       <Section8 />
       <Footer />
-      
+
     </div>
   );
 }

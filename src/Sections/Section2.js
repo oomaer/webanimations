@@ -10,7 +10,6 @@ const Section2 = () => {
 
   let text = document.getElementById('section2-text');
   let circleimages = document.getElementsByClassName('circleimg');
-  console.log(text);
   
   if(text !== null && circleimages !== null){
     if(onScreen){

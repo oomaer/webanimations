@@ -1,13 +1,32 @@
 import './footer.css';
+import { useState } from 'react';
 
 const Footer = () => {
+    const [email, setEmail] = useState('');
+
+    const postOnGoogleSheet = () => {
+        if(email !== ''){
+            const scriptURL = 'https://sheetdb.io/api/v1/601q2sw5yp93n';
+            const form = document.forms['google-sheet-form']
+            console.log(new FormData(form));
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => 
+                {alert("Thanks for Contacting us..! We Will Contact You Soon...")})
+            .catch(error => console.error('Error!', error.message))
+        }
+    }
+
+
+
     return(
         <footer className = 'footer'>
             <div className = 'footer-content'>
-                <form className = 'footer-mail-form'>
-                    <input placeholder = 'your email'></input>
-                    <button>{'>'}</button>
+                <form className = 'footer-mail-form' id = 'google-sheet-form'>
+                    <input placeholder = 'your email' name = 'email' value = {email} type = 'email' 
+                                onChange = {(event) => setEmail(event.target.value)}></input>
+                    <button onClick = {postOnGoogleSheet}>{'>'}</button>
                 </form>
+                
                 <div className = 'footer-icons'>
                     <a href = '/' rel="noreferrer" target="_blank" className = 'footer-link'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-facebook footer-icon" viewBox="0 0 16 16">
@@ -33,9 +52,11 @@ const Footer = () => {
                     </svg>
                     </a>
                 </div>
+                
                 <div className = 'footer-labels'>
                     <label id = 'thankyou-message'>Thanks for you visit</label>
                 </div>
+
             </div>
         </footer>
     )
