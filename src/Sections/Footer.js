@@ -54,7 +54,7 @@ const Footer = () => {
                 </div>
                 
                 <div className = 'footer-labels'>
-                    <label id = 'thankyou-message'>Thanks for you visit</label>
+                    <label id = 'thankyou-message'>Thankyou for visiting</label>
                 </div>
 
             </div>
