@@ -1,0 +1,176 @@
+
+.section7-revert{
+    --section7-bg-animation: revertBackground;
+    --section7-fg-animation: revertColor;
+}
+
+.section7-invert{
+    --section7-bg-animation: invertBackground;
+    --section7-fg-animation: invertColor;
+}
+
+#section7{
+    padding: 3rem;
+    color: white;
+    animation: var(--section7-fg-animation) 1s 1;
+    animation-fill-mode: forwards;
+    position: relative;
+    z-index: 1;
+}
+
+#section7::before{
+    background: rgb(34, 34, 34); 
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    animation: var(--section7-bg-animation) 1s 1;
+    animation-fill-mode: forwards;
+    z-index: -1;
+}
+
+.section7-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section7-content .section7-icon{
+    height: 70px;
+    width: 70px;
+}
+
+.section7-text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem;
+
+}
+
+.section7-text-container h1{
+    font-size: 3.5em;
+    max-width: 30ch;
+    margin: 0;
+    text-align: center;
+    color: inherit;
+}
+
+.section7-para{
+    max-width: 60ch;
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--secondary-color);
+}
+
+.section7-signup-btn{
+    background: none;
+    font-family: inherit;
+    font-size: 1.1em;
+    height: 100px;
+    width: 100px;
+    border: 3px solid white;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    margin: 2rem;
+}
+
+
+.section7-signup-btn:hover{
+    background: rgb(34, 34, 34);
+    border-color: rgb(34, 34, 34);
+    color: white;
+}
+
+
+.section7-learnmore-lbl{
+    color: inherit;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    text-decoration: none;
+    position: relative;
+}
+
+.section7-learnmore-lbl::after{
+    content : '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.section7-learnmore-lbl:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+@keyframes invertBackground {
+    0%{
+        -webkit-clip-path: circle(100% at 50% 55%); 
+        clip-path: circle(100% at 50% 55%);
+    }
+    100%{
+        -webkit-clip-path: circle(0% at 50% 55%); 
+        clip-path: circle(0% at 50% 55%);
+    }
+}
+
+@keyframes revertBackground {
+    0%{
+        -webkit-clip-path: circle(0% at 50% 55%); 
+        clip-path: circle(0% at 50% 55%);
+    }
+    100%{
+        -webkit-clip-path: circle(100% at 50% 55%); 
+        clip-path: circle(100% at 50% 55%);
+    }
+}
+
+@keyframes invertColor {
+    0%{
+        color: white;
+    }
+    100%{
+        color: rgb(34, 34, 34);
+    }
+}
+
+@keyframes revertColor {
+    0%{
+        color: rgb(34, 34, 34);
+    }
+    100%{
+        color: white;
+    }
+}
+
+
+@media only screen and (max-width: 450px){
+    .section7-text-container h1{
+        font-size: 2em;
+    }
+    .section7-content .section7-icon{
+        height: 50px;
+        width: 50px;
+        margin-bottom: 2rem;
+    }
+    .section7-para{
+        font-size: 0.8em;
+    }
+    .section7-learnmore-lbl{
+        font-size: 0.8em;
+    }
+}

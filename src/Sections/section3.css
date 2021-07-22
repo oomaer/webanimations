@@ -1,0 +1,29 @@
+
+
+.section3-image-container{
+    position: relative;
+    height: 33vw;
+    width: 30vw;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#section3-img{
+    height: 100%;
+    width: 70%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#section3-img2{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    position: absolute;
+    width: 18vw;
+    height: 5vw;
+    top: 30%;
+    right: 0%;
+    animation: fadeUp 0.5s 1;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}

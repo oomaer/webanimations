@@ -26,8 +26,8 @@ const Section5 = () => {
             document.getElementById('commitimg').style.animation = 'none';
             setTimeout(() => { document.getElementById('commitimg').style.animation = '' }, 100);
             
-    
         }
+        
         let timelbls = document.getElementsByClassName('time-lbl');
         
         if(themeClass === 'light'){

@@ -1,3 +1,49 @@
+
+@keyframes fadeUp{
+    0%{
+        opacity: 0;
+        transform: translateY(130px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slightlyRotateDown{
+    0%{
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+    50%{
+        transform: rotate(-30deg) translate(-3px, 20px);
+    }
+    100%{
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+}
+
+@keyframes translateUp{
+    0%{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+.heightUp_animation{
+    opacity: 0;
+    animation: fadeUp 1s 1;
+    animation-fill-mode: forwards;
+}
+
 .section-content{
     font-family: 'Otomanopee One', sans-serif;
     display: flex;
@@ -27,11 +73,12 @@
     line-height: 115%;
     margin-bottom: 1.5rem;
     text-align: left;
-    max-width: 16ch;
+    max-width: 18ch;
+    color: var(--primary-color);
 }
 
 .section-text-container p{
-    color: rgb(133, 133, 133);
+    color: var(--secondary-color);
     max-width: 50ch;
     text-align: left;
     margin: 0;
@@ -88,7 +135,14 @@
     .section-image-container{
         height: 50vw;
         width: 70vw;
+    }
 
+
+    .section8-question-card h2{
+        font-size: 1.5em;  
+    }
+    .section8-question-card p{
+        font-size: 0.8em;  
     }
 }
 
@@ -96,7 +150,14 @@
     .section-image-container{
         height: 70vw;
         width: 80vw;
+    }
 
+
+    .section8-question-card h2{
+        font-size: 1em;  
+    }
+    .section8-question-card p{
+        font-size: 0.7em;  
     }
 }
 
@@ -110,6 +171,23 @@
     .section-image-container{
         height: 80vw;
         width: 90vw;
+    }
 
+    .section8-row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media only screen and (max-width: 350px){
+    :root{
+        font-size: 80%;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    :root{
+        font-size: 70%;
     }
 }

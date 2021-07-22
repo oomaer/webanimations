@@ -1,0 +1,35 @@
+
+#section8{
+    background:linear-gradient(150deg, rgba(255,255,255,1) 0%, rgba(221,225,233,1) 100%, rgba(189,198,213,1) 100%);
+}
+
+.section8-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+}
+
+.section8-row{
+    display: flex;
+}
+
+.section8-question-card{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 50ch;
+    margin: 0rem 2rem;
+}
+
+.section8-question-card h2{
+    margin: 1rem 0rem;
+    font-size: 2em;
+    
+}
+
+.section8-question-card p{
+    color: var(--secondary-color);
+    font-size: 0.9em;
+}
+

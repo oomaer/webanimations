@@ -1,48 +1,27 @@
 
 import './section4.css';
-
-import { useState, useEffect, useRef } from "react";
-// Hook
-function useOnScreen(ref, rootMargin = "0px") {
-    // State and setter for storing whether element is visible
-    const [isIntersecting, setIntersecting] = useState(false);
-    useEffect(() => {
-      let observerRef = null;
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          // Update our state when observer callback fires
-          setIntersecting(entry.isIntersecting);
-        },
-        {
-          rootMargin,
-        }
-      );
-      if (ref.current) {
-        observerRef = ref.current;
-        observer.observe(ref.current);
-      }
-      return () => {
-        observer.unobserve(observerRef);
-      };
-    }, [ref, rootMargin]); // Empty array ensures that effect is only run on mount and unmount
-    return isIntersecting;
-}
-
-
+import { useRef } from "react";
+import useOnScreen from '../useOnScreen';
 
 const Section4 = () => {
    
     const sec4_ref = useRef();
     const onScreen = useOnScreen(sec4_ref, "100px");
-  
-    if(document.getElementById('section4-imgback') !== null){
+
+    const text = document.getElementById('section4-text');
+    const image1 = document.getElementById('section4-imgback');
+    const image2 = document.getElementById('section4-imgfront');
+    
+    if(image1 !== null && text !== null && image2 !== null){
         if(onScreen){
-            document.getElementById('section4-imgback').style.transform = '';
-            document.getElementById('section4-imgfront').style.transform = '';
+            image1.style.transform = '';
+            image2.style.transform = '';
+            text.classList.add('heightUp_animation');
         }
         else{
-            document.getElementById('section4-imgback').style.transform = 'scaleX(0.7)';
-            document.getElementById('section4-imgfront').style.transform = 'scaleY(0.7)';
+            image1.style.transform = 'scaleX(0.7)';
+            image2.style.transform = 'scaleY(0.7)';
+            text.classList.remove('heightUp_animation');
         }
     }
 
@@ -50,7 +29,7 @@ const Section4 = () => {
         <section id = 'section4' className = 'section'>
 
             <div className = 'section-content section4-content'>
-                <div className = 'section-text-container section4-text-container'>
+                <div className = 'section-text-container section4-text-container' id = 'section4-text'>
                     <h1>Extend and customize</h1>
                     <p>Configure your editor with dotfiles and 
                         extensions to create a consistent environment in every codespace.
