@@ -2,6 +2,7 @@
 import './section2.css';
 import {useRef} from "react";
 import useOnScreen from '../useOnScreen';
+
 const Section2 = () => {
 
   const ref = useRef();

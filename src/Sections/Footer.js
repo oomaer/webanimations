@@ -4,17 +4,37 @@ import { useState } from 'react';
 const Footer = () => {
     const [email, setEmail] = useState('');
 
-    const postOnGoogleSheet = () => {
+    const postOnGoogleSheet = (e) => {
+        e.preventDefault();
         if(email !== ''){
-            const scriptURL = 'https://sheetdb.io/api/v1/601q2sw5yp93n';
-            const form = document.forms['google-sheet-form']
-            console.log(new FormData(form));
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => 
-                {alert("Thanks for Contacting us..! We Will Contact You Soon...")})
-            .catch(error => console.error('Error!', error.message))
+            document.getElementById('postOnGoogleSheetbtn').style.pointerEvents = 'none';
+            const url = 
+            'https://script.google.com/macros/s/AKfycbyZJPC4MrtedBit3c6Bb18w2jmR5wbA32hLqhdFx-5crG6Lf-8wSqjRzfzB0yjDgC1U/exec';
+            
+            fetch(url, {
+                method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                mode : 'no-cors', // no-cors, *cors, same-origin
+                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                redirect: 'follow', // manual, *follow, error
+                body: JSON.stringify({email: email}) // body data type must match "Content-Type" header
+            })
+            .then(response => {
+                    alert('Thank you for Contacting Us');
+                    setEmail('');
+                    document.getElementById('postOnGoogleSheetbtn').style.pointerEvents = 'all';
+            })
+            .catch(err => {
+                console.log(err);
+                document.getElementById('postOnGoogleSheetbtn').style.pointerEvents = 'all';
+            });
         }
+
     }
+
 
 
 
@@ -24,7 +44,7 @@ const Footer = () => {
                 <form className = 'footer-mail-form' id = 'google-sheet-form'>
                     <input placeholder = 'your email' name = 'email' value = {email} type = 'email' 
                                 onChange = {(event) => setEmail(event.target.value)}></input>
-                    <button onClick = {postOnGoogleSheet}>{'>'}</button>
+                    <button id = 'postOnGoogleSheetbtn' onClick = {postOnGoogleSheet}>{'>'}</button>
                 </form>
                 
                 <div className = 'footer-icons'>
