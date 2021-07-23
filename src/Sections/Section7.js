@@ -22,7 +22,7 @@ const Section7 = () => {
                 <div className = 'section7-text-container'>
                     <h1>Sign Up Now</h1>
                 </div>
-                <button onMouseEnter = {invertAnimation} onMouseLeave = {revertAnimation} className = 'section7-signup-btn'>Sign Up</button>
+                <a href = '/'><button onMouseEnter = {invertAnimation} onMouseLeave = {revertAnimation} className = 'section7-signup-btn'>Sign Up</button></a>
                 <p className = 'section7-para'>
                     Codespaces is available in beta. 
                     Add yourself to our early-access list to be one of the first to use it.

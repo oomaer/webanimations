@@ -69,7 +69,7 @@ const Section5 = () => {
 
     return (
         <section id = 'section5' className = {themeClass}>
-            <div className = 'section-content'>
+            <div className = 'section-content section5-content'>
                 
                 <div className = 'section-text-container section5-text-container'>
                     <div className = 'section5-icons'>

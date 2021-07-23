@@ -16,26 +16,27 @@ footer {
 
 .footer-mail-form{
     margin-bottom: 2rem;
+    font-size: 2rem;
 }
 .footer-mail-form input{
     border: none;
     outline: none;
     background: transparent;
     color: white;
-    font-size: 2em;
     border-bottom: 1px solid white;
     padding: 0.3rem 1rem;
+    font-size: inherit;
 }
 .footer-mail-form button{
     border: none;
     outline: none;
     background: transparent;
     color: white;
-    font-size: 2em;
     position: relative;
     left: -15px;
     padding: 0.3rem 0rem;
     cursor: pointer;
+    font-size: inherit;
 }
 .footer-mail-form button:hover{
     transition: all 0.2s ease-in-out;
@@ -78,5 +79,8 @@ footer {
 @media only screen and (max-width: 600px){
       .footer-link{
           margin: 1.4rem;
+      }
+      .footer-mail-form{
+          font-size: 1em;
       }
 }
